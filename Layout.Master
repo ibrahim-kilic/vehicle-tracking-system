@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="ATS.Layout" %>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('araba.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+   
+      .content-card {
+        background: rgba(255,255,255,0.85);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,.15);
+        padding: 24px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="vehicles.aspx">Araçları Listele</a></li>
+        <li id="liAracEkle" runat="server"><a href="vehicleregister.aspx">Araç Ekle</a></li>
+        <li><a href="stocktracking.aspx">Stok Takibi</a></li>
+        <li><a href="aboutus.aspx">Hakkımızda</a></li>
+        <li><a href="contact.aspx">İletişim</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="liKayitEkle" runat="server">
+          <a href="register.aspx"><span class="glyphicon glyphicon-user"></span> Kayıt Ekle</a>
+        </li>
+
+        <li><a href="logout.aspx"><span class="glyphicon glyphicon-log-in"></span> Çıkış Yap</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <form id="form1" runat="server">
+    <div class="container">
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+    </div>
+  </form>
+
+</body>
+</html>
